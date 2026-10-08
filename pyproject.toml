@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "work-order-tracker"
+version = "1.0.0"
+description = "A FastAPI work-order tracker with Groq-powered summaries"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.115.12",
+    "httpx==0.28.1",
+    "python-dotenv==1.1.0",
+    "uvicorn[standard]==0.34.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
